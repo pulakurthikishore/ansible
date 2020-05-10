@@ -1,0 +1,11 @@
+---
+- name: file module on nodes
+  hosts: managed1
+  become: yes
+  tasks:
+          - name: file create
+            file:
+                    name: /opt/file.module.txt
+                    state: touch
+                    mode: 0644
+

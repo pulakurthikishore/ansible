@@ -1,0 +1,11 @@
+---
+- name: file-directory  module on nodes
+  hosts: managed1
+  become: yes
+  tasks:
+          - name: directory create
+            file:
+                    name: /opt/file-directory
+                    state: directory
+                    mode: 0644
+

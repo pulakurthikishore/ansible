@@ -1,0 +1,7 @@
+---
+- name: checking ping on nodes
+  hosts: managed1
+  become: yes
+  tasks:
+          - name: ping module
+            ping:
